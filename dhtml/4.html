@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Add Your Numbers</h1>
+    <form action="" onsubmit="add(event)">
+        <div id="inputs">
+            <input type="text" name="num" placeholder="Enter a number">
+            <br>
+            <input type="text" name="num" placeholder="Enter another number">
+            <br>
+        </div>
+        <input type="submit" value="ADD">
+        <button type="button" onclick="addMore()">Add More</button>
+    </form>
+    <h2 id="res"></h2>
+
+    <script>
+        function addMore(){
+            let newInp = document.createElement("input")
+            newInp.type = "text"
+            newInp.name ="num"
+            newInp.placeholder ="Enter another number"
+
+            let newBr = document.createElement("br")
+
+            let removeBtn = document.createElement("button")
+            removeBtn.innerHTML = "X"
+            removeBtn.onclick = function(){
+                newInp.remove()
+                newBr.remove()
+                removeBtn.remove()
+            }
+
+            document.getElementById("inputs").append(newInp)
+            document.getElementById("inputs").append(removeBtn)
+            document.getElementById("inputs").append(newBr)
+
+        }
+        function add(e){
+            e.preventDefault()
+            let nums = document.getElementsByName("num")
+            console.log(nums);
+            let sum = 0;
+            for(let inp of nums){
+                let temp = Number(inp.value)
+                if(inp.value == "" || isNaN(inp.value)){
+                    alert("Please enter numbers")
+                    return
+                }
+                console.log(temp);
+                sum += temp
+            }
+            document.getElementById("res").innerHTML = "Sum = "+sum
+        }
+    </script>
+</body>
+</html>

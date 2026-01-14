@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        td, th{
+            border: 1px solid black;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <p>Select your brand</p>
+    </div>
+
+    <script>
+        let mobileBrands = ["samsung", "apple", "oppo", "vivo", "moto"]
+        // let ul = document.createElement("ul")
+        // for(let item of mobileBrands){
+        //     let li = document.createElement('li')
+        //     li.innerHTML = item
+        //     ul.append(li)
+        // }
+        // document.getElementById("container").append(ul)
+
+        // buttons
+        // for(let brand of mobileBrands){
+        //     let btn = document.createElement("button")
+        //     btn.innerHTML = brand
+        //     btn.onclick = function(){
+        //         // alert("You have seleted "+brand)
+        //         display(brand)
+        //     }
+        //     document.getElementById("container").append(btn)
+        // }
+
+        // let htmlStr = "<ul>";
+        // for(let brand of mobileBrands){
+        //     htmlStr += "<li>"+brand+"</li>"
+        // }
+        // htmlStr += "</ul>"
+        // // console.log(htmlStr);
+        // document.getElementById("container").innerHTML = htmlStr
+
+        // let htmlStr = "";
+        // for(let brand of mobileBrands){
+        //     htmlStr += "<button onclick=display('"+brand+"')>"+brand+"</button>"
+        // }
+        // document.getElementById("container").innerHTML = htmlStr
+
+        // function display(brand){
+        //     alert("You have selected "+brand)
+        // }
+
+        let employees = [
+            {id: 101, name: "John", salary: 800000},
+            {id: 102, name: "Jane", salary: 500000},
+            {id: 103, name: "Smith", salary: 700000},
+            {id: 104, name: "Wade", salary: 300000},
+            {id: 105, name: "Hop", salary: 900000},
+        ]
+
+        let htmlStr = "<table>";
+        htmlStr += "<tr><th>ID</th><th>Name</th><th>Salary</th></tr>"
+        for(let emp of employees){
+            htmlStr += "<tr><td>"+emp.id+"</td><td>"+emp.name+"</td><td>"+emp.salary+"</td></tr>"
+        }
+        htmlStr += "</table>"
+        document.getElementById("container").innerHTML = htmlStr
+    </script>
+</body>
+</html>

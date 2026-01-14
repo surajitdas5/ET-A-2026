@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .my-class{
+            text-decoration: underline;
+            font-size: 50px;
+            color: green;
+        }
+        .class-two{
+            background-color: springgreen;
+            border: 1px solid red;
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading">Hello World!</h1> 
+    <button onclick="changeText()">Change</button>
+    <button onclick="showText()">Show</button>
+    <button onclick="hideText()">Hide</button>
+    <button onclick="toggleText()">Toggle</button>
+
+    <script>
+        let h1 = document.getElementById("heading")
+        // let h1 = document.getElementsByTagName("h1")
+        // h1.innerHTML = "<u>JavaScript</u>"
+        // h1.innerText = "<u>JavaScript</u>"
+
+        function changeText(){
+            h1.innerHTML = "React"
+            // h1.style.color = 'red'
+            // h1.style.backgroundColor = "yellow"
+            h1.className = "my-class"
+            h1.classList.add("class-two")
+        }
+
+        function showText(){
+            h1.classList.remove("hide")
+        }
+        function hideText(){
+            h1.classList.add("hide")
+        }
+        function toggleText(){
+            h1.classList.toggle("hide")
+        }
+
+        let arr = ["Hello", 1, 2.3, false, [1,2,3,4]]
+        // for(let i=0; i<arr.length; i++){
+        //     console.log(arr[i]);
+        // }
+
+        for(let item of arr){
+            console.log(item);
+        }
+
+        let student = {
+            id: 1,
+            name: "John",
+            graduated: false,
+            mobile: [7894562365, 8745894125],
+            address: {
+                state: "Odisha",
+                country: "India"
+            },
+            getName: function(){
+                return this.name;
+            }
+        }
+        console.log(student.name);
+        console.log(student.mobile[1]);
+        console.log(student.address.country);
+        
+    </script>
+</body>
+</html>

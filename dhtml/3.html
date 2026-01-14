@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post" onsubmit="add(event)">
+        <input type="text" id="food" placeholder="Enter Food Name">
+        <input type="submit" value="ADD">
+    </form>    
+
+    <ul id="foods">
+        <li>Rice</li>
+        <li>Dal</li>
+    </ul>
+
+    <a href="https:silicon.ac.in" target="_blank" onclick="test(event)">Silicon</a>
+    <script>
+        function test(e){
+            e.preventDefault()
+        }
+        function add(e){
+            e.preventDefault()
+            let food = document.getElementById("food").value        
+            console.log(food);
+            let li = document.createElement("li")
+            let removeBtn = document.createElement("button")
+            removeBtn.innerHTML = "X"
+            removeBtn.onclick = function(){
+                this.parentElement.remove()
+            }
+            li.innerHTML = food
+            li.append(removeBtn)
+
+            document.getElementById("foods").append(li)
+            document.getElementById("food").value = ""
+        }
+    </script>
+</body>
+</html>
