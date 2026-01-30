@@ -1,9 +1,0 @@
-1. install nodejs (one time)
-2. restart vs code (if mneeded)
-3. create a folder in project explorer (name without space)
-4. open folder in integrated terminal
-5. initialize the project (cmd): npm init -y
-6. install json-server (cmd): npm install json-server
-7. caeate a db.json file (inside the folder) and add some data
-8. add a script in package.json file: "server": "json-server --watch db.json"
-9. run server (cmd): npm run server
