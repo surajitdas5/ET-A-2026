@@ -1,0 +1,34 @@
+{
+  "products": [
+    {
+      "id": "3",
+      "name": "TShirt",
+      "category": "Clothing",
+      "price": 499
+    },
+    {
+      "id": "961f",
+      "name": "mouse",
+      "category": "Electronics",
+      "price": "459"
+    },
+    {
+      "name": "Pant",
+      "category": "Clothing",
+      "price": "999",
+      "id": "f43f"
+    },
+    {
+      "id": "82ca",
+      "name": "Keyboard",
+      "category": "Electronics",
+      "price": "899"
+    },
+    {
+      "name": "Rice",
+      "category": "Food",
+      "price": "399",
+      "id": "b60d"
+    }
+  ]
+}
