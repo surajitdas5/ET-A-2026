@@ -1,0 +1,102 @@
+[
+    {
+        "eid": "E101",
+        "mobile": "9876543210",
+        "email": "john.doe@example.com",
+        "address": {
+            "city": "Mumbai",
+            "state": "Maharashtra",
+            "zip": 400001
+        }
+    },
+    {
+        "eid": "E102",
+        "mobile": "9876543211",
+        "email": "jane.smith@example.com",
+        "address": {
+            "city": "Delhi",
+            "state": "Delhi",
+            "zip": 110001
+        }
+    },
+    {
+        "eid": "E103",
+        "mobile": "9876543212",
+        "email": "amit.patel@example.com",
+        "address": {
+            "city": "Ahmedabad",
+            "state": "Gujarat",
+            "zip": 380001
+        }
+    },
+    {
+        "eid": "E104",
+        "mobile": "9876543213",
+        "email": "priya.sharma@example.com",
+        "address": {
+            "city": "Chandigarh",
+            "state": "Punjab",
+            "zip": 160001
+        }
+    },
+    {
+        "eid": "E105",
+        "mobile": "9876543214",
+        "email": "raj.singh@example.com",
+        "address": {
+            "city": "Jaipur",
+            "state": "Rajasthan",
+            "zip": 302001
+        }
+    },
+    {
+        "eid": "E106",
+        "mobile": "9876543215",
+        "email": "kavita.gupta@example.com",
+        "address": {
+            "city": "Kolkata",
+            "state": "West Bengal",
+            "zip": 700001
+        }
+    },
+    {
+        "eid": "E107",
+        "mobile": "9876543216",
+        "email": "sandeep.verma@example.com",
+        "address": {
+            "city": "Bangalore",
+            "state": "Karnataka",
+            "zip": 560001
+        }
+    },
+    {
+        "eid": "E108",
+        "mobile": "9876543217",
+        "email": "ananya.das@example.com",
+        "address": {
+            "city": "Hyderabad",
+            "state": "Telangana",
+            "zip": 500001
+        }
+    },
+    {
+        "eid": "E109",
+        "mobile": "9876543218",
+        "email": "rahul.kapoor@example.com",
+        "address": {
+            "city": "Chennai",
+            "state": "Tamil Nadu",
+            "zip": 600001
+        }
+    },
+    {
+        "eid": "E110",
+        "mobile": "9876543219",
+        "email": "pooja.khanna@example.com",
+        "address": {
+            "city": "Pune",
+            "state": "Maharashtra",
+            "zip": 411001
+        }
+    }
+]

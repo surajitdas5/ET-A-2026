@@ -1,0 +1,62 @@
+[
+    {
+        "eid": "E101",
+        "name": "John Doe",
+        "salary": 60000,
+        "dept": "SDE"
+    },
+    {
+        "eid": "E102",
+        "name": "Jane Smith",
+        "salary": 70000,
+        "dept": "SDE"
+    },
+    {
+        "eid": "E103",
+        "name": "Amit Patel",
+        "salary": 55000,
+        "dept": "MGR"
+    },
+    {
+        "eid": "E104",
+        "name": "Priya Sharma",
+        "salary": 80000,
+        "dept": "HR"
+    },
+    {
+        "eid": "E105",
+        "name": "Raj Singh",
+        "salary": 75000,
+        "dept": "SDE"
+    },
+    {
+        "eid": "E106",
+        "name": "Kavita Gupta",
+        "salary": 60000,
+        "dept": "MGR"
+    },
+    {
+        "eid": "E107",
+        "name": "Sandeep Verma",
+        "salary": 90000,
+        "dept": "SDE"
+    },
+    {
+        "eid": "E108",
+        "name": "Ananya Das",
+        "salary": 65000,
+        "dept": "HR"
+    },
+    {
+        "eid": "E109",
+        "name": "Rahul Kapoor",
+        "salary": 70000,
+        "dept": "SDE"
+    },
+    {
+        "eid": "E110",
+        "name": "Pooja Khanna",
+        "salary": 80000,
+        "dept": "SDE"
+    }
+]
