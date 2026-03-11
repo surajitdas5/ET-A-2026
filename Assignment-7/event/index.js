@@ -1,12 +1,20 @@
 import express from 'express';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { dirname } from 'node:path';
+
 
 import connectToDB from './utils/db.js';
 import userRouter from "./routes/user.router.js"
+import eventRouter from "./routes/event.router.js"
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 let app = express();
 
 app.use(express.json())
-
+app.use("/uploads", express.static(path.join(__dirname, "uploads")))
 
 // routes
 app.get("/", (req, res)=>{
@@ -14,6 +22,7 @@ app.get("/", (req, res)=>{
 })
 
 app.use("/users", userRouter)
+app.use("/event", eventRouter)
 
 
 
