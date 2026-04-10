@@ -1,14 +1,25 @@
 import { useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
+import axiosClient from '../apiClient';
 function Navbar(){
     let searchKeyRef = useRef();
     let navigate = useNavigate();
+    const { user, logout } = useAuth()
 
     function handleSearch(e) {
         e.preventDefault();
         let searchKey = searchKeyRef.current.value
         console.log(searchKey);
         navigate(`/event/search/${searchKey}`)    
+    }
+    async function handleLogOut(){
+        try {
+            let res = await axiosClient.get("/users/logout")
+            logout()
+        } catch (error) {
+            console.log(error.response);
+        }
     }
     return ( 
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -23,12 +34,33 @@ function Navbar(){
                     <li className="nav-item">
                         <Link className="nav-link" to="/">Home</Link>
                     </li>
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/signin">Sign In</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/signup">Sign Up</Link>
-                    </li>
+                    {
+                        user ? (
+                        <>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/add-event">Add Event</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/">Profile</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/" onClick={handleLogOut}>Log Out</Link>
+                        </li>
+                        <li className="nav-item">
+                            <span className="nav-link" >Welcome, {user.name}</span>
+                        </li>
+                        </>
+                    ) : (
+                    <>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/signin">Sign In</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/signup">Sign Up</Link>
+                        </li>
+                    </>
+                    )
+                    }
                    
                 </ul>
                 <form className="d-flex" role="search" onSubmit={handleSearch}>

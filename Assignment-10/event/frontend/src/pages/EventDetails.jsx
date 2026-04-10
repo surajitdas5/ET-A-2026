@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import axiosClient from "../apiClient";
 import { dateForamatter } from "../utls";
+import { useAuth } from "../context/AuthContext";
 
 function EventDetails(){    
     let { eid } = useParams();
     let [ event, setEvent ] = useState(false);
+    let { user } = useAuth()
 
     async function getEvent() {
         try {
@@ -38,6 +40,17 @@ function EventDetails(){
                 <h4>Co-ordinator Details: </h4>
                 <p>Name: {event.user.name}</p>
                 <p>Mobile: {event.user.mobile}</p>
+                <div>
+                    {
+                        user._id === event.user._id && (
+                            <>
+                                <Link to="/" className="btn btn-sm btn-outline-info me-1">Update Image</Link>
+                                <Link to="/" className="btn btn-sm btn-outline-warning me-1">Update Event</Link>
+                                <Link to="/" className="btn btn-sm btn-outline-danger me-1">Delete Event</Link>
+                            </>
+                        )
+                    }
+                </div>
             </div>
         </div>
     )

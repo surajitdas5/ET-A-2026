@@ -1,12 +1,14 @@
 import { useState } from "react"
 import axiosClient from "../apiClient"
 import { useNavigate } from "react-router-dom"
+import { useAuth } from "../context/AuthContext"
 
 function SignIn(){
     let [ formData, setFormData ] = useState({ email: "", password: "" })
     let [message, setMessage] = useState("")
     let [error, setError] = useState(false)
     const navigate = useNavigate()
+    const { login } = useAuth()
 
     function handleChange(e){
         let { name, value } = e.target
@@ -18,9 +20,12 @@ function SignIn(){
         setError("")
         try {
             let res = await axiosClient.post("/users/login", formData)
+            let data = res.data
+            login(data)
             setError(false)
             setMessage("")
             setFormData({ email: "", password: "" })
+
             navigate("/")
         } catch (error) {
             console.log(error.response);

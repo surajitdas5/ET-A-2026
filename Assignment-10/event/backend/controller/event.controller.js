@@ -11,7 +11,7 @@ async function addEvent(req, res){
 
         res.status(201).send(newEvent)
     } catch (error) {
-        console.log(err)
+        console.log(error)
         res.status(500).send({"error": error.message})
     }
 }
@@ -22,7 +22,7 @@ async function allEvents(req, res) {
         events.forEach( e => e.imageName=`http://localhost:5000/uploads/${e.imageName}`)
         res.send(events)
     } catch (error) {
-        console.log(err)
+        console.log(error)
         res.status(500).send({"error": error.message})
     }
 }
@@ -37,7 +37,7 @@ async function updateEventImage(req, res){
 
         res.status(200).send(event)
     } catch (error) {
-        console.log(err)
+        console.log(error)
         res.status(500).send({"error": error.message})
     }
 }
